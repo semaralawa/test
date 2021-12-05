@@ -1,0 +1,32 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); */
+
+body {
+  /* font-family: 'Syne Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  text-align: center;
+  color: #2c3e50;
+  margin: 80px 10px;
+}
+
+video {
+  width: 35vw;
+  height: 20vw;
+  margin: 10px;
+  background: #2c3e50;
+}
+
+.videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  height: 2vw;
+  width: 2vw;
+  padding: 2px;
+  /* color:rgb(253, 204, 70); */
+  opacity:0.8;
+  border-radius:4px;
+}
