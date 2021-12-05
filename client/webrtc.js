@@ -20,12 +20,18 @@ function pageReady() {
   remoteVideo = document.getElementById('remoteVideo');
 
   address = window.location.hostname;
-  if (address.includes('localhost')) {
-    serverConnection = new WebSocket('wss://' + address + ':8443');
-  }
-  else {
-    serverConnection = new WebSocket('wss://' + window.location.hostname);
-  }
+
+  //use this if you want to add some domain
+  // if (address.includes('localhost')) {
+  //   serverConnection = new WebSocket('wss://' + address + ':8443');
+  // }
+  // else {
+  //   serverConnection = new WebSocket('wss://' + window.location.hostname);
+  // }
+
+  //comment this if you use code above it
+  serverConnection = new WebSocket('wss://' + address + ':8443');
+
   serverConnection.onmessage = gotMessageFromServer;
 
   var constraints = {
