@@ -45,6 +45,14 @@ wss.on('connection', function (ws) {
     // Broadcast any received message to all clients
     console.log('received: %s', message);
     wss.broadcast(message);
+    if (message.includes("movement")) {
+      fs.writeFile("move_data.txt", message, function (err) {
+        console.log("movement data received");
+        if (err) {
+          console.log(err);
+        }
+      });
+    }
   });
   ws.on('error', function (exc) {
     console.log("ignoring exception: " + exc);
@@ -59,9 +67,5 @@ wss.broadcast = function (data) {
   });
 };
 
-console.log('Server running. Visit https://localhost:' + HTTPS_PORT + ' in Firefox/Chrome.\n\n\
-Some important notes:\n\
-  * Note the HTTPS; there is no HTTP -> HTTPS redirect.\n\
-  * You\'ll also need to accept the invalid TLS certificate.\n\
-  * Some browsers or OSs may not allow the webcam to be used by multiple pages at once. You may need to use two different browsers or machines.\n'
+console.log('Server running. Visit https://localhost:' + HTTPS_PORT + ' in Firefox/Chrome.\n'
 );
