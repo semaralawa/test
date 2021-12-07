@@ -5,6 +5,7 @@ var remoteStream;
 var peerConnection;
 var uuid;
 var serverConnection;
+var movement_result;
 
 var peerConnectionConfig = {
   'iceServers': [
@@ -18,7 +19,7 @@ function pageReady() {
 
   localVideo = document.getElementById('localVideo');
   remoteVideo = document.getElementById('remoteVideo');
-
+  movement_result = document.getElementById('result');
   address = window.location.hostname;
 
   //use this if you want to add some domain
@@ -44,6 +45,11 @@ function pageReady() {
   } else {
     alert('Your browser does not support getUserMedia API');
   }
+}
+
+function button_click(element) {
+  serverConnection.send(JSON.stringify({ 'movement': element.id }));
+  movement_result.innerHTML = element.id;
 }
 
 function getUserMediaSuccess(stream) {
@@ -101,7 +107,6 @@ function createdDescription(description) {
 function gotRemoteStream(event) {
   console.log('got remote stream');
   event.streams[0].getTracks().forEach((track) => {
-    console.log('masuk sini');
     remoteStream.addTrack(track);
   });
   remoteVideo.srcObject = remoteStream;
