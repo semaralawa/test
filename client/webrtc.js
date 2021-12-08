@@ -11,6 +11,17 @@ var peerConnectionConfig = {
   'iceServers': [
     { 'urls': 'stun:stun.stunprotocol.org:3478' },
     { 'urls': 'stun:stun.l.google.com:19302' },
+    { 'urls': 'stun:relay.backups.cz' },
+    {
+      url: 'turn:relay.backups.cz',
+      credential: 'webrtc',
+      username: 'webrtc'
+    },
+    {
+      url: 'turn:relay.backups.cz?transport=tcp',
+      credential: 'webrtc',
+      username: 'webrtc'
+    }
   ]
 };
 
