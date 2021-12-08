@@ -30,6 +30,10 @@ const handleRequest = function (request, response) {
     response.writeHead(200, { 'Content-Type': 'image/svg+xml' });
     response.end(fs.readFileSync('client' + request.url));
   }
+  else if (request.url === '/move') {
+    response.writeHead(200, { 'Content-Type': 'application/json' });
+    response.end(fs.readFileSync('move_data.txt'));
+  }
 };
 
 const httpsServer = https.createServer(serverConfig, handleRequest);
