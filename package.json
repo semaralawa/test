@@ -7,6 +7,19 @@
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semaralawa/test.git"
+  },
+  "keywords": [
+    "webrtc"
+  ],
+  "author": "Santa Semaralawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/semaralawa/test/issues"
+  },
+  "homepage": "https://github.com/semaralawa/test#readme",
   "dependencies": {
     "ws": "^3.3.2"
   }
