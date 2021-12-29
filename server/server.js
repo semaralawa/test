@@ -22,6 +22,10 @@ const handleRequest = function (request, response) {
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.end(fs.readFileSync('client/index.html'));
   }
+  else if (request.url === '/client') {
+    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.end(fs.readFileSync('client/client.html'));
+  }
   else if (request.url === '/webrtc.js') {
     response.writeHead(200, { 'Content-Type': 'application/javascript' });
     response.end(fs.readFileSync('client/webrtc.js'));

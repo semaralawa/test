@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="webrtc.js"></script>
+  <title>test Ratna WebRTC</title>
+  <style>
+    body {
+      text-align: center;
+      color: #2c3e50;
+      margin: 80px 10px;
+    }
+
+    video {
+      width: 40vw;
+      height: 30vw;
+      margin: 10px;
+      background: #2c3e50;
+    }
+
+    .videos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="videos">
+    <span>
+      <h3>Operator</h3>
+      <video id="remoteVideo" autoplay="true"></video>
+    </span>
+    <span>
+      <h3>robot RATNA</h3>
+      <video id="localVideo" autoplay="true" muted="muted"></video>
+    </span>
+  </div>
+  <br />
+  <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+
+  <script type="text/javascript">
+    pageReady();
+  </script>
+</body>
+
+</html>

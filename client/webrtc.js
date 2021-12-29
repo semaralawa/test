@@ -41,7 +41,8 @@ function pageReady() {
   //   serverConnection = new WebSocket('wss://' + window.location.hostname);
   // }
 
-  //comment this if you use code above it
+  //use this if you only use public IP
+  //also comment this if you use code above it
   serverConnection = new WebSocket('wss://' + address + ':8443');
 
   serverConnection.onmessage = gotMessageFromServer;
