@@ -10,37 +10,50 @@
     body {
       text-align: center;
       color: #2c3e50;
-      margin: 80px 10px;
+      /* margin: 80px 10px; */
+      background-color: black;
     }
 
     video {
-      width: 40vw;
-      height: 30vw;
-      margin: 10px;
+      /* margin: 10px; */
       background: #2c3e50;
     }
 
-    .videos {
+    .remote {
+      width: 96vw;
+      height: 96vh;
+      z-index: 1;
+    }
+
+    .local {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 20vw;
+      height: auto;
+      z-index: 10;
+    }
+
+    /* .videos {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
+    } */
   </style>
 </head>
 
 <body>
+  <h1>RATNA02 CONTROL SERVER</h1>
   <div class="videos">
     <span>
-      <h3>Operator</h3>
-      <video id="remoteVideo" autoplay="true"></video>
+      <video class="remote" id="remoteVideo" autoplay="true"></video>
     </span>
     <span>
-      <h3>robot RATNA</h3>
-      <video id="localVideo" autoplay="true" muted="muted"></video>
+      <video class="local" id="localVideo" autoplay="true" muted="muted"></video>
     </span>
   </div>
-  <br />
-  <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+  <!-- <br /> -->
+  <!-- <input type="button" id="start" onclick="start(true)" value="Start Video"></input> -->
 
   <script type="text/javascript">
     pageReady();

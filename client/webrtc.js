@@ -48,7 +48,7 @@ function pageReady() {
   serverConnection.onmessage = gotMessageFromServer;
 
   var constraints = {
-    video: true,
+    video: { width: 1080, height: 633 },
     audio: true,
   };
 
