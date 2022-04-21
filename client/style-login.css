@@ -1,0 +1,152 @@
+@font-face { font-family: aquire; src: url('Aquire-BW0ox.otf'); } 
+
+html{
+  background-image: url("bg-home.png");
+  background-size: auto;
+  /* padding: 1rem; */
+}
+
+body {
+  font-family: "Lucida Grande";
+  padding-left: 15%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* for login */
+
+.ratna-logo h1{
+  font-family: "aquire";
+  font-size: 50px;
+  padding-top: 200px;
+  text-align:center;
+}
+
+.password-wrapper{
+  padding-top: 20px;
+  text-align: center;
+  font-family: 'Lucida Sans';
+}
+
+.password-wrapper h3{
+  padding-bottom: 10px;
+}
+
+.password-wrapper input{
+  font-size: 14px;
+}
+
+/* FOR HOME */
+a{
+  font-family: "aquire";
+  opacity: 0.8;
+  padding: 7px 30px;
+  background-color: rgb(185, 0, 0);
+  color: white;
+  float: right;
+}
+
+a:hover{
+  opacity: 1;
+}
+
+header{
+  padding-left: 100px;
+  text-align: center;
+}
+
+header h1{
+  font-family: "aquire";
+  font-size: 50px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.container{
+  width: 75%;
+  margin-left:15%;
+  display: inline-block;
+  text-align: center;
+}
+
+.camera{
+  float: left;
+  text-align: center;
+}
+
+.camera h3{
+  font-family: "aquire";
+  padding-bottom: 10px;
+}
+
+.camera img{
+  width: 500px;
+  height: 281px;
+}
+
+.controller h3{
+  font-family: "aquire";
+  padding-bottom: 10px;
+}
+
+.controller{
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.controller p{
+  font-size: 2px;
+}
+
+.btn{
+  height: 32px;
+  width: 32px;
+  padding: 2px;
+  /* color:rgb(253, 204, 70); */
+  opacity:0.8;
+  border-radius:4px;
+}
+
+.btn:hover{
+  opacity:1.0;
+  cursor: pointer;
+}
+
+button{
+  background: none;
+  border: none;
+}
+/* 
+.side {
+  height: 37px;
+  width: 37px;
+  padding: 3px 5px;
+}
+
+.side:active{
+  height: 33px;
+  width: 33px;
+  opacity:1.0;
+  color:rgb(128, 128, 128);
+  cursor: pointer;
+}
+.corner{
+  height: 32px;
+  width: 32px;
+}
+
+.corner:active{
+  height: 30px;
+  width: 30px;
+  opacity:1.0;
+  color:rgb(128, 128, 128);
+  cursor: pointer;
+} */

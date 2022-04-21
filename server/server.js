@@ -30,6 +30,10 @@ const handleRequest = function (request, response) {
     response.writeHead(200, { 'Content-Type': 'application/javascript' });
     response.end(fs.readFileSync('client/webrtc.js'));
   }
+  else if (request.url.includes('.css')) {
+    response.writeHead(200, { 'Content-Type': 'text/css' });
+    response.end(fs.readFileSync('client' + request.url));
+  }
   else if (request.url.includes('.svg')) {
     response.writeHead(200, { 'Content-Type': 'image/svg+xml' });
     response.end(fs.readFileSync('client' + request.url));
